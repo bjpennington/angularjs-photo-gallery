@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Angular Photo Gallery</title>
+    <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:200,300,400,600,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
+    <link rel="stylesheet" href="vendors/cirrus.css">
+    <link rel="stylesheet" href="styles/styles.css">
+    <script src="vendors/angular.js"></script>
+    <script src="scripts/people.js"></script>
+    <script src="scripts/client.js"></script>
+    <script></script>
+</head>
+
+<body ng-app="PhotosApp">
+    <div class="container" ng-controller="PhotosController as vm">
+        <header>
+            <h1>Angular Photo Gallery</h1>
+            <h3>Click on a photo to reveal the name.</h3>
+        </header>
+
+        <div class="tools">
+            <input id="filterNames" type="text" ng-model="filterInput.name" placeholder="Filter by name">
+            <button id="resetBtn" ng-click="vm.resetCards()" class="btn btn-accent">Reset All Cards</button>
+        </div>
+
+        <div ng-repeat="person in vm.people | filter : filterInput : strict" class="card col-3">
+            
+            <div class="card-container" ng-click="vm.flipCard(person)">
+                <div ng-hide="person.showName" class="card-image" style="background-image: url(https://github.com/{{person.githubUsername}}.png)"></div>
+                <div ng-show="person.showName" class="title-container">
+                    <p class="title">{{person.name}}</p>
+                </div>
+            </div>
+            
+            <div class="action-bar center">
+                <p>Click Count: {{person.clickCount}}</p>
+            </div>
+            
+            <div class="action-bar center">
+                <a class="u u-LR" href="http://github.com/{{person.githubUsername}}" target="_blank">{{person.name}}'s Github</a>
+            </div>
+        
+        </div>
+
+    </div>
+</body>
+
+</html>

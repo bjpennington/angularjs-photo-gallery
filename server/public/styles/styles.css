@@ -1,0 +1,58 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    background: #777777;
+    height: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+}
+header {
+    padding: 10px;
+    background: coral;
+}
+
+h1 {
+    color: azure;
+    text-align: center;
+    margin: 0;
+    padding: 10px;
+    font-weight: 200;
+}
+
+h3 {
+    text-align: center;
+    color: azure;
+    margin: 0;
+    padding-bottom: 20px;
+    font-weight: 200;
+    font-size: 150%;
+}
+
+.card {
+    width: 350px;
+    margin: 15px;
+    float: left;
+}
+
+.container {
+    max-width: 780px;
+    margin: 0 auto;
+    height: auto;
+    background: white;
+    overflow: hidden;
+}
+
+.card .title-container .title {
+    color: coral;
+}
+
+.tools {
+    margin: 10px;
+}
+
+#filterNames {
+    width: 60%;
+}
+
+#resetBtn {
+    float: right;
+}

@@ -1,0 +1,27 @@
+{
+  "name": "angular-photos",
+  "version": "1.0.0",
+  "description": "For this activity, you will be dispalying a grid of photos on the page. When a photo is clicked on, the phot should be replaced with a div containing the persons name. Clicking a second time will hide the name of the person.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PrimeAcademy/angular-photos.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/PrimeAcademy/angular-photos/issues"
+  },
+  "homepage": "https://github.com/PrimeAcademy/angular-photos#readme",
+  "dependencies": {
+    "angular": "^1.6.9",
+    "body-parser": "^1.18.2",
+    "cirrus-ui": "^0.5.4",
+    "express": "^4.16.3"
+  }
+}
